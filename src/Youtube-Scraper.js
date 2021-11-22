@@ -38,7 +38,7 @@ class CommentScraper {
             throw new Error(requester.message)
         }
 
-        let token = continuation ? ? requester.getContinuationToken(sortByNewest) : continuation
+        let token = continuation // ? ? requester.getContinuationToken(sortByNewest)
         if (!token) {
             return { comments: [], continuation: token }
         }
